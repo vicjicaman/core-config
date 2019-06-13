@@ -43,7 +43,7 @@ export const parse = (folder, file, initial) => {
 }
 
 
-export const values = (config) => {
+export const values = (folder, config) => {
 
   const dependenciesConfigValues = {};
 

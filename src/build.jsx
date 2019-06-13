@@ -3,13 +3,13 @@ import path from 'path'
 import * as JsonUtils from '@nebulario/core-json'
 import * as Config from './config'
 
-const build = (folder) => {
+export const build = (folder) => {
 
   const tmpFolder = path.join(folder, "tmp");
   const distFolder = path.join(folder, "dist");
   const config = JsonUtils.load(path.join(folder, "config.json"));
 
-  const dependenciesConfigValues = Config.values(config);
+  const dependenciesConfigValues = Config.values(folder, config);
   const configValues = {};
 
   for (const moduleid in config.dependencies) {
