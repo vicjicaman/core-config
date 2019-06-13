@@ -8,10 +8,14 @@ import {
 import {
   build
 } from './build.jsx';
+import {
+  dependencies
+} from './dependencies'
 
 export {
   build,
   get,
   init,
-  clear
+  clear,
+  dependencies
 };

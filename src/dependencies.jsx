@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import * as JsonUtils from './json.jsx'
+import * as JsonUtils from '@nebulario/core-json'
 
 
 export const dependencies = (folder, file = "config.json") => {
@@ -10,17 +10,20 @@ export const dependencies = (folder, file = "config.json") => {
 
   for (const moduleid in config.dependencies) {
     const {
+      url,
       version
     } = config.dependencies[moduleid];
+
+
     dependencies.push({
       dependencyid: 'dependency|config.json|dependencies.' + moduleid + '.version',
       kind: "config",
       filename: "config.json",
       path: 'dependencies.' + moduleid + '.version',
-      fullname: moduleid,
+      fullname: url,
       version
     });
   }
-
+  
   return dependencies;
 }
