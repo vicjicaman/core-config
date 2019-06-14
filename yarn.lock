@@ -2,9 +2,12 @@
 # yarn lockfile v1
 
 
-"@nebulario/core-json@link:../core-json":
-  version "0.0.0"
-  uid ""
+"@nebulario/core-json@1.70.1-config-handler-prod":
+  version "1.70.1-config-handler-prod"
+  resolved "https://registry.yarnpkg.com/@nebulario/core-json/-/core-json-1.70.1-config-handler-prod.tgz#83e83c276e391c7676549cd057f2bf0b86ae899d"
+  integrity sha512-KWRohfO831epJxRWcXW83eedsaPXvJ7KbvKxtX5OwBDbwIvPkA6V4ZRMh02rH/2i5uFwawTdQWw9F1ilo/XkVg==
+  dependencies:
+    yamljs "^0.3.0"
 
 "@nebulario/core-process@1.70.0-master":
   version "1.70.0-master"
@@ -17,9 +20,12 @@
     lodash "^4.17.4"
     uuid "^3.3.2"
 
-"@nebulario/core-repository@link:../core-repository":
-  version "0.0.0"
-  uid ""
+"@nebulario/core-repository@1.70.1-config-handler-prod":
+  version "1.70.1-config-handler-prod"
+  resolved "https://registry.yarnpkg.com/@nebulario/core-repository/-/core-repository-1.70.1-config-handler-prod.tgz#555bb1e9c6cca0d8cdbeab3182ed8efd5e0fe0b6"
+  integrity sha512-MXPV1uz/Nkp4PKkESBMmVPMLJO6ghPh6cKQJIEokgK3ZGrgJxekjbLmuIG0uSPsZBOM6RKbKjqaRVL0BPl/htA==
+  dependencies:
+    "@nebulario/core-process" "1.70.0-master"
 
 abbrev@1:
   version "1.1.1"
