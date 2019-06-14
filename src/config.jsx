@@ -45,6 +45,8 @@ export const parse = (folder, file, initial) => {
 
 export const values = (folder, config) => {
 
+  const tmpFolder = path.join(folder, "tmp");
+  const depsFolder = path.join(tmpFolder, "dependencies");
   const dependenciesConfigValues = {};
 
   for (const moduleid in config.dependencies) {
@@ -53,17 +55,17 @@ export const values = (folder, config) => {
     } = config.dependencies[moduleid];
 
 
+    let localFolder = null;
     if (version.startsWith("file:")) {
-      const localFolder = path.join(folder, version.replace("file:", ""));
-      const depConfig = JsonUtils.load(path.join(localFolder, "dist", "config.json"));
-
-      for (const entry in depConfig) {
-        dependenciesConfigValues[entry + '@' + moduleid] = depConfig[entry].value;
-      }
-
+      localFolder = path.join(folder, version.replace("file:", ""));
     } else {
-      // get the content from the namespace
+      localFolder = path.join(depsFolder, moduleid);
+    }
 
+    const depConfig = JsonUtils.load(path.join(localFolder, "dist", "config.json"));
+
+    for (const entry in depConfig) {
+      dependenciesConfigValues[entry + '@' + moduleid] = depConfig[entry].value;
     }
   }
 
