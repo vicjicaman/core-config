@@ -1,6 +1,6 @@
 {
   "name": "@nebulario/core-config",
-  "version": "1.70.0-master",
+  "version": "1.70.0-beta-public-libs-prod",
   "description": "Config utilities",
   "main": "./dist/index.js",
   "repository": "github.com:vicjicaman/core-config.git",
@@ -34,8 +34,8 @@
     "child-process-promise": "^2.2.1",
     "uuid": "^3.3.2",
     "lodash": "^4.17.4",
-    "@nebulario/core-json": "1.70.0-master",
-    "@nebulario/core-repository": "1.70.0-master"
+    "@nebulario/core-json": "1.70.0-beta-public-libs-prod",
+    "@nebulario/core-repository": "1.70.0-beta-public-libs-prod"
   },
   "peerDependencies": {}
 }
