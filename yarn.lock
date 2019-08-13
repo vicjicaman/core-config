@@ -2,17 +2,17 @@
 # yarn lockfile v1
 
 
-"@nebulario/core-json@1.70.0-master":
-  version "1.70.0-master"
-  resolved "https://registry.yarnpkg.com/@nebulario/core-json/-/core-json-1.70.0-master.tgz#854c806d800ade7e0e3d94df4bda75244d1bd251"
-  integrity sha512-lLk4W9Y1R63lZ/MCDM4gWWqaTLUpmlI7dY0i/RnEGJe6u9Q1H5R0cKNOhfIJVjJWndcjzqe06N0Q9Wu7fYgEXA==
+"@nebulario/core-json@1.70.0-beta-public-libs-prod":
+  version "1.70.0-beta-public-libs-prod"
+  resolved "https://registry.yarnpkg.com/@nebulario/core-json/-/core-json-1.70.0-beta-public-libs-prod.tgz#f2d428284fbe25f6cec5c31cebb966a80b6b0488"
+  integrity sha512-nyQXDELh9xb9f2faJPNXhCZ5HL8o9m+3Iq2ilojvSDO7I2H33vxTfbF/3RAzdIOUbybD6j44wFuVk4ueRp2GyQ==
   dependencies:
     yamljs "^0.3.0"
 
-"@nebulario/core-process@1.70.0-master":
-  version "1.70.0-master"
-  resolved "https://registry.yarnpkg.com/@nebulario/core-process/-/core-process-1.70.0-master.tgz#614bb5134de536ca7ee949f4282ddab37924f5e4"
-  integrity sha512-QRJxAXgGuizN8UjTLtZJqViE9RJuiWqG13Ls1vtsZXW5+dIZFbF/ZjtNC5r/yPxQK5DTLeGKZyHPy97JPaJRNg==
+"@nebulario/core-process@1.70.0-beta-public-libs-prod":
+  version "1.70.0-beta-public-libs-prod"
+  resolved "https://registry.yarnpkg.com/@nebulario/core-process/-/core-process-1.70.0-beta-public-libs-prod.tgz#a354f66de2bfed718847a3fbd8788d32fb7c68aa"
+  integrity sha512-UGLW5QlrlFtJTwVE6eW/Lpj7ElCZ/kYX7VzSHKs4Nx7INzmBv8DGa85PFKLwgw/sgXlI5biOq9UEh6CryrerWA==
   dependencies:
     babel-runtime "^6.26.0"
     bluebird "^3.5.1"
@@ -20,12 +20,12 @@
     lodash "^4.17.4"
     uuid "^3.3.2"
 
-"@nebulario/core-repository@1.70.0-master":
-  version "1.70.0-master"
-  resolved "https://registry.yarnpkg.com/@nebulario/core-repository/-/core-repository-1.70.0-master.tgz#d2b60d7dca10a161a6869e6e32d5cd6a75a15cfe"
-  integrity sha512-I5bxZ7sjiLwR3rdNcYf8BDiB0zOzrYe3PkJcyoOX11knihFiK86HL8zDewiSFqz22tObcCA2up1CAkcmzr9N1Q==
+"@nebulario/core-repository@1.70.0-beta-public-libs-prod":
+  version "1.70.0-beta-public-libs-prod"
+  resolved "https://registry.yarnpkg.com/@nebulario/core-repository/-/core-repository-1.70.0-beta-public-libs-prod.tgz#565896ddfd2965b8e54b2b6bf3e9ac1f15a21849"
+  integrity sha512-s9MOahmR5ddpNw7+ny20TK60zvpHItnzq4PkrNV/sZR3iESlBD9Pxsv35pcoRDt7CWojulUgdQ0i5QFbXokAow==
   dependencies:
-    "@nebulario/core-process" "1.70.0-master"
+    "@nebulario/core-process" "1.70.0-beta-public-libs-prod"
 
 abbrev@1:
   version "1.1.1"
