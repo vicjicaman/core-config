@@ -15,11 +15,13 @@ export const build = (folder) => {
   const dependenciesConfigValues = Config.values(folder, config);
   const configValues = {};
 
-  for (const entry of config.config) {
-    configValues[entry.name] = {
-      value: Config.replace(Config.replace(entry.value, configValues), dependenciesConfigValues),
-      type: entry.type || null
-    };
+  if (config.config) {
+    for (const entry of config.config) {
+      configValues[entry.name] = {
+        value: Config.replace(Config.replace(entry.value, configValues), dependenciesConfigValues),
+        type: entry.type || null
+      };
+    }
   }
 
 
