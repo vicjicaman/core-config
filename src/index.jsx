@@ -1,5 +1,7 @@
 import {
-  get
+  replace,
+  parse,
+  values
 } from './config.jsx';
 import {
   init,
@@ -14,7 +16,9 @@ import {
 
 export {
   build,
-  get,
+  replace,
+  parse,
+  values,
   init,
   clear,
   dependencies
