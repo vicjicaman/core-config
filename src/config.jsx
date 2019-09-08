@@ -5,6 +5,11 @@ import * as JsonUtils from '@nebulario/core-json'
 export const replace = (content, config) => {
   let replaced = content;
 
+  if (typeof replaced !== "string") {
+    return replaced;
+  }
+
+
   for (const configVar in config) {
     const configVal = config[configVar];
     replaced = replaced.replace(new RegExp("\\$\\{" + configVar + "\\}", 'g'), typeof configVal === 'object' ? configVal.value : configVal);
