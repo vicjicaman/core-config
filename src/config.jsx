@@ -12,7 +12,15 @@ export const replace = (content, config) => {
 
   for (const configVar in config) {
     const configVal = config[configVar];
-    replaced = replaced.replace(new RegExp("\\$\\{" + configVar + "\\}", 'g'), typeof configVal === 'object' ? configVal.value : configVal);
+    const rawVal = typeof configVal === 'object' ? configVal.value : configVal;
+
+
+
+    if(typeof rawVal == 'number'){
+      replaced = replaced.replace(new RegExp("'\\$\\{" + configVar + "\\}'", 'g'), rawVal);
+    }
+
+    replaced = replaced.replace(new RegExp("\\$\\{" + configVar + "\\}", 'g'), rawVal);
   }
 
   return replaced;
