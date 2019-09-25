@@ -1,6 +1,6 @@
 {
   "name": "@nebulario/core-config",
-  "version": "1.70.5-runtime-reference-prod",
+  "version": "1.70.3-master",
   "description": "Config utilities",
   "main": "./dist/index.js",
   "repository": "github.com:vicjicaman/core-config.git",
