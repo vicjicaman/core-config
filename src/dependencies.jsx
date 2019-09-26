@@ -24,6 +24,6 @@ export const dependencies = (folder, file = "config.json") => {
       version
     });
   }
-  
+
   return dependencies;
 }
