@@ -63,7 +63,7 @@ export const load = folder => {
   return values(folder, config);
 };
 
-export const values = (folder, config) => {
+export const values = (folder, config, opts = {}) => {
   const tmpFolder = path.join(folder, "tmp");
   const depsFolder = path.join(tmpFolder, "dependencies");
   const res = {};
@@ -87,10 +87,12 @@ export const values = (folder, config) => {
     }
   }
 
-  const selfConfig = JsonUtils.load(path.join(folder, "dist", "config.json"));
+  if (opts.self !== false) {
+    const selfConfig = JsonUtils.load(path.join(folder, "dist", "config.json"));
 
-  for (const entry in selfConfig) {
-    res[entry] = selfConfig[entry].value;
+    for (const entry in selfConfig) {
+      res[entry] = selfConfig[entry].value;
+    }
   }
 
   return res;
