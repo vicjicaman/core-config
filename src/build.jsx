@@ -20,7 +20,9 @@ export const build = folder => {
 
   const config = JsonUtils.load(path.join(folder, "config.json"));
 
-  const dependenciesConfigValues = Config.values(folder, config);
+  const dependenciesConfigValues = Config.values(folder, config, {
+    self: false
+  });
   const configValues = {};
 
   if (config.config) {
